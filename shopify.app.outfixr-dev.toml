@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "outfixr-dev"
+client_id = "84102a4128ac0ad6ed30ac12659681b6"
+application_url = "https://dig-addressed-administered-yen.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://dig-addressed-administered-yen.trycloudflare.com/auth/callback",
+  "https://dig-addressed-administered-yen.trycloudflare.com/auth/shopify/callback",
+  "https://dig-addressed-administered-yen.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "groooot.myshopify.com"

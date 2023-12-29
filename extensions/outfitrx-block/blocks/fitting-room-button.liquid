@@ -1,0 +1,79 @@
+
+<script src="{{ 'avatarxr.js' | asset_url }}" defer></script>
+{%- style -%}
+  #avatarxr--{{ block.id }} {
+    transition: height 0.3s ease;
+  }
+  #avatarxr--{{ block.id }}:not(:has(button.loaded)) {
+    height: 0;
+    overflow: hidden;
+  }
+  #avatarxr--{{ block.id }} button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+  }
+  {%- if block.settings.color.alpha != 0 and block.settings.color_bg != "" -%}
+    #avatarxr--{{ block.id }} button {
+      {%- if block.settings.color.alpha > 0 -%}
+        color: {{ block.settings.color }};
+      {%- endif -%}
+      {%- unless block.settings.color_bg == "" -%}
+        background: {{ block.settings.color_bg }};
+      {%- endunless -%}
+    }
+  {%- endif -%}
+  #avatarxr--{{ block.id }} button.loaded {
+    animation: loadButton 1s 0.1s forwards;
+  }
+  .button--icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  .button--icon svg {
+    width: 100%;
+    height: 100%;
+  }
+  @keyframes loadButton {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+{%- endstyle -%}
+<fitting-room-button data-product-id="{{ product.id }}" data-sku="{{ product.selected_or_first_available_variant.sku }}" data-test-mode="{{ block.settings.test_mode }}" data-product-lookup="{{ block.settings.product_lookup }}">
+  <div id="avatarxr--{{ block.id }}" class="button--container" {{ block.shopify_attributes }}>
+    <button data-product-id="{{ block.settings.product.id }}" class="button avatarxr-button {{ block.settings.button_classes }}">
+      <span class="button--icon">
+        <svg class="icon--hanger" width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11 4C11 4.55228 10.5523 5 10 5C9.44772 5 9 4.55228 9 4H11ZM13.8623 6.2909L13.0002 6.9806L11.7508 5.41892L12.6128 4.7292L13.8623 6.2909ZM13.0002 6.9806V8H11.0002V6.9806H13.0002ZM9 4V3.93524H11V4H9ZM9 3.93524C9 2.6477 9.82389 1.50461 11.0454 1.09745L11.6778 2.99482C11.273 3.12975 11 3.50856 11 3.93524H9ZM13.0002 6.9806H11.0002C11.0002 6.3731 11.2764 5.79846 11.7508 5.41892L13.0002 6.9806ZM14.6692 2.60226C15.3004 3.86478 14.9692 5.40528 13.8623 6.2909L12.6128 4.7292C12.9787 4.4365 13.0925 3.92112 12.8803 3.49669L14.6692 2.60226ZM12.8803 3.49669C12.6582 3.05249 12.1427 2.83986 11.6778 2.99482L11.0454 1.09745C12.4607 0.625669 14.0049 1.27376 14.6692 2.60226L12.8803 3.49669Z" fill="currentColor"/>
+          <path d="M12 7.5L2.14082 12.612C1.21108 13.0941 1.55384 14.4998 2.60112 14.4998H21.3989C22.4462 14.4998 22.7889 13.0941 21.8592 12.612L12 7.5Z" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </span>
+      <span class="button--text">{{ block.settings.button_text }}</span>
+    </button>
+  </div>
+</fitting-room-button>
+
+
+{% schema %}
+{
+  "name": "Fitting room button",
+  "target": "section",
+  "settings": [
+    { "type": "product", "id": "product", "label": "product", "autofill": true },
+    { "type": "header", "content": "Button settings" },
+    { "type": "select", "id": "test_mode", "label": "Test mode", "options": [{"label": "On", "value": "on"}, {"label": "Off", "value": "off"}], "default": "off" },
+    { "type": "select", "id": "product_lookup", "label": "Product lookup", "options": [{"label": "Product ID", "value": "product_id"}, {"label": "SKU", "value": "sku"}], "default": "product_id" },
+    { "type": "text", "id": "button_text", "label": "Button label", "default": "View in fitting room" },
+    { "type": "color", "id": "color", "label": "Text color" },
+    { "type": "color_background", "id": "color_bg", "label": "Background color" },
+    { "type": "text", "id": "button_classes", "label": "Custom classes" }
+  ]
+}
+{% endschema %}
+

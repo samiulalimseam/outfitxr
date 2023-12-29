@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "outfitrx"
+client_id = "476222fdcb6fc98057044b14c7db00bf"
+application_url = "https://f47b-103-120-38-79.ngrok-free.app"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+use_legacy_install_flow = true
+
+[auth]
+redirect_urls = [
+  "https://f47b-103-120-38-79.ngrok-free.app/auth/callback",
+  "https://f47b-103-120-38-79.ngrok-free.app/auth/shopify/callback",
+  "https://f47b-103-120-38-79.ngrok-free.app/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "groooot.myshopify.com"
