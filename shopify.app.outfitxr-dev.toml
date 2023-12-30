@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "outfitxr-dev"
+client_id = "31c2a2eacc6c681b4249a5c0db67d66e"
+application_url = "https://desirable-obtaining-rob-classics.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://desirable-obtaining-rob-classics.trycloudflare.com/auth/callback",
+  "https://desirable-obtaining-rob-classics.trycloudflare.com/auth/shopify/callback",
+  "https://desirable-obtaining-rob-classics.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "quickstart-652e7786.myshopify.com"

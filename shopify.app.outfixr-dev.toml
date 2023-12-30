@@ -2,7 +2,7 @@
 
 name = "outfixr-dev"
 client_id = "84102a4128ac0ad6ed30ac12659681b6"
-application_url = "https://dig-addressed-administered-yen.trycloudflare.com"
+application_url = "https://terrible-acts-gst-heat.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,9 +11,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://dig-addressed-administered-yen.trycloudflare.com/auth/callback",
-  "https://dig-addressed-administered-yen.trycloudflare.com/auth/shopify/callback",
-  "https://dig-addressed-administered-yen.trycloudflare.com/api/auth/callback"
+  "https://terrible-acts-gst-heat.trycloudflare.com/auth/callback",
+  "https://terrible-acts-gst-heat.trycloudflare.com/auth/shopify/callback",
+  "https://terrible-acts-gst-heat.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
