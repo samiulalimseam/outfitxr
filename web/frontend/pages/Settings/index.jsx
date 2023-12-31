@@ -9,7 +9,6 @@ import {
   VStack,
   Text,
 } from "@chakra-ui/react";
-import { BsCoin, BsInfoCircle , BsFillRecordFill } from "react-icons/bs";
 import SsoPopup from "../../components/popup/SsoPopup";
 import { useAppQuery } from "../../hooks/useAppQuery";
 
@@ -68,9 +67,7 @@ console.log(accessToken)
               </Flex>
               <HStack borderRadius={"md"} bg={"blue.50"} p={4}>
                 <Text fontSize={"sm"} fontWeight={600} color={"blue.600"}>
-                  <BsInfoCircle
-                    style={{ margin: "0 10px 0 0 ", display: "inline-block" }}
-                  />
+                  infoIcon
                   Connecting to the CMS opens a popup window that might be
                   blocked by the browser. Please check your pop-up blocker if
                   you dont see it.
@@ -101,7 +98,7 @@ console.log(accessToken)
                   </Text>
                   <Text color={"gray"}>
                     {" "}
-                    <BsCoin style={{ display: "inline-block" }} /> 600{" "}
+                    CoinIcon 600{" "}
                   </Text>
                 </Box>
               </Flex>
@@ -114,9 +111,7 @@ console.log(accessToken)
               >
                 <Text fontWeight={"black"}>Auto-renewal is disabled</Text>
                 <Text fontSize={"sm"} fontWeight={600} color={"blue.600"}>
-                  <BsInfoCircle
-                    style={{ margin: "0 10px 0 0 ", display: "inline-block" }}
-                  />
+                  infoIcon
                   Enable auto-renewal to automatically receive new credits every
                   month .
                 </Text>
@@ -146,7 +141,7 @@ console.log(accessToken)
                   </Text>
                   <Text color={"gray"}>
                     {" "}
-                    <BsFillRecordFill style={{ display: "inline-block" }} /> Test{" "}
+                   RecordIcon Test{" "}
                   </Text>
                 </Box>
               </Flex>
