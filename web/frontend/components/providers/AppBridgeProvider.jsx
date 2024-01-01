@@ -43,7 +43,7 @@ export function AppBridgeProvider({ children }) {
 
     return {
       host,
-      apiKey: process.env.SHOPIFY_API_KEY,
+      apiKey: '4e478bc001bf7f8bd445c1804d39ca82',
       forceRedirect: true,
     };
   });
