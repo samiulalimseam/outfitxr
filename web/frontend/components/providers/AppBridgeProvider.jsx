@@ -43,7 +43,7 @@ export function AppBridgeProvider({ children }) {
 
     return {
       host,
-      apiKey: '31c2a2eacc6c681b4249a5c0db67d66e',
+      apiKey: '4e478bc001bf7f8bd445c1804d39ca82',
       forceRedirect: true,
     };
   });

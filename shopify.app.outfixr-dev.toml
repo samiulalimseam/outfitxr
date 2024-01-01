@@ -2,7 +2,7 @@
 
 name = "outfixr-dev"
 client_id = "84102a4128ac0ad6ed30ac12659681b6"
-application_url = "https://shape-listening-creation-charging.trycloudflare.com"
+application_url = "https://brakes-hosting-biography-neighborhood.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,9 +11,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://shape-listening-creation-charging.trycloudflare.com/auth/callback",
-  "https://shape-listening-creation-charging.trycloudflare.com/auth/shopify/callback",
-  "https://shape-listening-creation-charging.trycloudflare.com/api/auth/callback"
+  "https://brakes-hosting-biography-neighborhood.trycloudflare.com/auth/callback",
+  "https://brakes-hosting-biography-neighborhood.trycloudflare.com/auth/shopify/callback",
+  "https://brakes-hosting-biography-neighborhood.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
