@@ -2,7 +2,7 @@
 
 name = "outfitxr-dev"
 client_id = "31c2a2eacc6c681b4249a5c0db67d66e"
-application_url = "https://limits-slovakia-presented-posting.trycloudflare.com"
+application_url = "https://game-layout-interpreted-cellular.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,9 +11,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://limits-slovakia-presented-posting.trycloudflare.com/auth/callback",
-  "https://limits-slovakia-presented-posting.trycloudflare.com/auth/shopify/callback",
-  "https://limits-slovakia-presented-posting.trycloudflare.com/api/auth/callback"
+  "https://game-layout-interpreted-cellular.trycloudflare.com/auth/callback",
+  "https://game-layout-interpreted-cellular.trycloudflare.com/auth/shopify/callback",
+  "https://game-layout-interpreted-cellular.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
