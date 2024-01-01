@@ -19,7 +19,7 @@ export default function App() {
   return (
     <PolarisProvider>
       <BrowserRouter>
-        <AppBridgeProvider>
+        <AppBridgeProvider  >
        
           <QueryProvider>
           <NavigationMenu
