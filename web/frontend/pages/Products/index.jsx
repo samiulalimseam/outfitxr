@@ -1,4 +1,3 @@
-import { SearchIcon } from "@chakra-ui/icons";
 import {
   Input,
   TableCaption,
@@ -138,7 +137,7 @@ const index = () => {
                 mb={4}
               />
               <Button size={"sm"}>
-                <SearchIcon />
+                Search
               </Button>
             </Flex>
           </Flex>
