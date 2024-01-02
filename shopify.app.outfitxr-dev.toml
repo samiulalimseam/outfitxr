@@ -2,7 +2,7 @@
 
 name = "outfitxr-dev"
 client_id = "31c2a2eacc6c681b4249a5c0db67d66e"
-application_url = "https://game-layout-interpreted-cellular.trycloudflare.com"
+application_url = "https://hereby-configure-cameroon-kingston.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,9 +11,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://game-layout-interpreted-cellular.trycloudflare.com/auth/callback",
-  "https://game-layout-interpreted-cellular.trycloudflare.com/auth/shopify/callback",
-  "https://game-layout-interpreted-cellular.trycloudflare.com/api/auth/callback"
+  "https://hereby-configure-cameroon-kingston.trycloudflare.com/auth/callback",
+  "https://hereby-configure-cameroon-kingston.trycloudflare.com/auth/shopify/callback",
+  "https://hereby-configure-cameroon-kingston.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

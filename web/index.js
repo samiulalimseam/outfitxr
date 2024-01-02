@@ -3,11 +3,23 @@ import { join } from "path";
 import { readFileSync } from "fs";
 import express from "express";
 import serveStatic from "serve-static";
+import mongoose from 'mongoose'
+// database connection
+
+  
+
 
 import shopify from "./shopify.js";
 import productCreator from "./product-creator.js";
 import GDPRWebhookHandlers from "./gdpr.js";
 import { getShop } from "./server/controllers/shopifyController.js";
+import rootRouter from "./server/routers/rootRouter.js";
+import { dbURI } from "./server/db/db.js";
+
+
+
+
+
 
 const PORT = parseInt(
   process.env.BACKEND_PORT || process.env.PORT || "3000",
@@ -18,6 +30,14 @@ const STATIC_PATH =
   process.env.NODE_ENV === "production"
     ? `${process.cwd()}/frontend/dist`
     : `${process.cwd()}/frontend/`;
+
+const url = dbURI.path+"/"+dbURI.dbName
+    mongoose
+    .connect(url)
+    .then(() => console.log('db connected'))
+    .catch(() => console.log('db not connected'))
+  
+
 
 const app = express();
 
@@ -39,6 +59,7 @@ app.post(
 app.use("/api/*", shopify.validateAuthenticatedSession());
 
 app.use(express.json());
+rootRouter(app)
 
 app.get("/api/products/count", async (_req, res) => {
   const countData = await shopify.api.rest.Product.count({
